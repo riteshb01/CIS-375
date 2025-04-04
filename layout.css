@@ -7,15 +7,15 @@ body {
     padding: 0 15px;
   }
   
-  /* Desktop layout for main content */
+ 
   main {
     display: flex;
     gap: 20px;
   }
   
-  /* Mobile-specific adjustments */
+  /* Mobile rules */
   @media screen and (max-width: 600px) {
-    /* Make main content a single column */
+    /* content in a single column */
     main {
       flex-direction: column;
     }
@@ -29,5 +29,9 @@ body {
     main article {
       order: -1;
     }
+  }
+
+  main img {
+    max-width: 100%;
   }
   
