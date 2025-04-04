@@ -1,0 +1,33 @@
+/* layout.css */
+
+/* Base layout styles (for desktop) */
+body {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 0 15px;
+  }
+  
+  /* Desktop layout for main content */
+  main {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Mobile-specific adjustments */
+  @media screen and (max-width: 600px) {
+    /* Make main content a single column */
+    main {
+      flex-direction: column;
+    }
+  
+    /* Center header and footer content */
+    header, footer {
+      text-align: center;
+    }
+  
+    /* Bring important elements (like article content) to the top */
+    main article {
+      order: -1;
+    }
+  }
+  

@@ -1,0 +1,20 @@
+I'm a Computer Information Systems Student with a passion
+for creating intuitive and accessible web applications. Not only Html and CSS, I like to play with  
+django framework in python. I believe in continuous learning
+and pushing myself to master new technologies.
+
+
+Work Experience section (September 2023 - Present)
+Student Assistant at Student Leadership and Engagement
+Assisted on day to day operation of campbell student union. Activities included 
+opening and closing of building, assigning tasks to building assitants,
+helping with creating layout for the events set-up and coordinating with greek life,
+orientation and family transitions and various other organizations.
+
+Student Assistant at Dean of Students (Summer 2024 June - Aug )
+Assisted Dean's Office with handling sensitive student information with discretion, 
+responding to routine emails and student questions
+Creating or distributing flyers and other promotional materials
+front desk support by answering phone calls, handling
+basic inquiries regarding orientation and transitions.
+

@@ -1,0 +1,28 @@
+Hello! I'm Ritesh Bastola, an International CIS student in Buffalo State University.
+I am turning Junior next semester and have a keen interest in web development.
+This website showcases my background, skills, and experiences.
+
+I created this website as the first checkpoint for final HTML project to demonstrate my 
+understanding of basic web development concepts using simple HTML & CSS. I used W3School to learn
+and use HTML element and CSS properties like flex, adding font face,and crafting aside section.
+
+I used W3C as a HTML Validator and W3 Jigsaw as a validator tool for CSS.
+Feel free to explore the different sections to learn more about me and my journey.
+
+Interests:
+
+Web Development
+Data Analysis
+Artificial Intelligence
+Machine Learning
+
+
+Footer for all pages:
+
+Sophomore | Computer Information Systems
+Buffalo State University 
+1300 Elmwood Avenue Buffalo New York
+Copy Right Ritesh Bastola - &Copy;
+
+
+
