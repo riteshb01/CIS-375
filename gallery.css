@@ -1,0 +1,149 @@
+/* 
+ * gallery.css
+ * Author: Ritesh Bastola
+ * Created: May 2025
+ * Description: Styling for photo gallery and media sections
+ */
+
+/* ===== BASE STYLES ===== */
+.gallery-page {
+    background-image: none;
+    background-color: #ffffff;
+}
+
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ===== HEADINGS ===== */
+.gallery-heading {
+    color: #325c86;
+    margin: 30px 0 15px 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+    font-size: 1.25rem;
+}
+
+.category-title {
+    color: #325c86;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* ===== MEDIA ITEMS WITH LEFT IMAGE, RIGHT TEXT ===== */
+.media-items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.media-item {
+    display: flex;
+    border: 1px solid #ddd;
+    background-color: white;
+}
+
+.item-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.item-image img,
+.item-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.item-description {
+    flex: 1;
+    padding: 15px;
+}
+
+.item-description h5 {
+    color: #325c86;
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+
+.item-description p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* ===== AUDIO SECTION ===== */
+.audio-gallery {
+    margin: 20px 0;
+}
+
+.audio-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #f5f5f5;
+}
+
+.audio-item h4 {
+    margin-bottom: 10px;
+    color: #325c86;
+}
+
+.audio-item audio {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.audio-item p {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* ===== LINKS ===== */
+.content-container a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.content-container a:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media screen and (min-width: 768px) {
+    /* Desktop styles */
+    .media-item {
+        flex-direction: row;
+    }
+    
+    .item-image {
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* Mobile styles */
+    .media-item {
+        flex-direction: column;
+    }
+    
+    .item-image {
+        width: 100%;
+        min-height: 200px;
+    }
+    
+    .content-container {
+        padding: 0 10px;
+    }
+}
+
+.pdf-container {
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: white;
+  }

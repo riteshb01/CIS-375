@@ -6,110 +6,149 @@ Date: Feb 26, 2025
 1st Checkpoint 
 
 2nd Checkpoint
-Date: Mar 28, 2025 -->
+Date: Mar 28, 2025 
+
+3rd Check Point 
+Date: April 28, 2025
+
+file name: index.html
+-->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritesh Home</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="layout.css">
-    <link rel="icon" type="image/x-icon" href ="Images/favicon.jpg">
-    <!-- favicon appears next to the website title. Looks pretty cool.
-    Learnt from W3 school. -->
+    <meta name="description" content="Personal website of Ritesh Bastola, CIS student at Buffalo State University">
+    <title>Ritesh Bastola | Home</title>
+    <link rel="stylesheet" href="reset.css" media="all">
+    <link rel="stylesheet" href="layout.css" media="screen">
+    <link rel="stylesheet" href="style.css" media="screen">
+    <link rel="stylesheet" href="effects.css" media="screen">
+    <link rel="stylesheet" href="print.css" media="print">
 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
 </head>
 
 <body>
     <header>
         <h1>Ritesh Bastola</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+      
+        <!-- Hamburger icon (mobile only) -->
+        
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+            <span class="menu-label">Menu</span>
+          </div>
+
+
+          
+        <nav aria-label="Main navigation">
+          <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" aria-current="page">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
         </nav>
-    </header>
-
+      </header>
+      
     <main>
+        
+
         <article>
-            <h2>Welcome to My Personal Website!</h2> <br>
-            <!-- Added br because the trasitioning image would overlap with the H2 text -->
+            <button id="darkModeBtn">Toggle Dark Mode</button>
+            <h2>Welcome to My Personal Website!</h2>
             <div class="home-container">
-                <img src="Images/ritesh_profile_image.jpeg" alt="Ritesh Bastola Picture" class="home-image">
+                <img src="Images/ritesh_profile_image.jpeg" alt="Ritesh Bastola" class="home-image" id="homeImage" loading="lazy">
+                
+
                 <div class="overlay">
-                  <div class="overlay-text">Ritesh Bastola</div>
+                    <div class="overlay-text"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ritesh Bastola <br> Turning Ideas into code</div>
                 </div>
-              </div>
-            <p> <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_css_image_overlay_opacity" target="_blank"> Click on me </a> to see where i learnt this effect from</p>
-            <p>Hello! I'm <em> Ritesh Bastola </em>, an International CIS student in Buffalo State University.
-            I am turning Junior next semester and have a keen interest in web development.
-            This website showcases my background, skills, and experiences.</p>
+            </div>
+            <br>
+            <section class="intro-section">
+                
+                <h2>Welcome to My Portfolio</h2>
+                
+              
+                <p>Greetings! I am <strong>Ritesh Bastola</strong>, an International Computer Information Systems student at Buffalo State University. As I advance toward my junior year, I am focused on developing expertise in web development and expanding my technical skill set.</p>
+              
+                <p>This portfolio website serves as a comprehensive showcase of my academic background, technical proficiencies, and professional experiences. Through this platform, I aim to demonstrate my growing capabilities in the field of information technology.</p>
+              
+                <p>Developed as part of my final HTML project, this website represents my understanding of fundamental web development principles. I've implemented various HTML elements and CSS properties including flexbox layouts, custom typography, and structured content organization through aside sections. The development process was guided by industry best practices learned through W3Schools resources.</p>
+              
+                
+              </section>
+            <section class="interests">
+                <h3>My Interests</h3>
+                <ul>
+                    <li>Web Development</li>
+                    <li>Data Analysis</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Machine Learning</li>
+                </ul>
+            </section>
 
-            <p>I created this website as the first checkpoint for final HTML project to demonstrate my
-            understanding of basic web development concepts using simple HTML & CSS. I used W3School to learn
-            and use HTML element and CSS properties like flex, adding font face,and crafting aside section.
-            </p>
-
-            <p> I used W3C as a HTML Validator and W3 Jigsaw as a validator tool for CSS.</p>
-
-            <p> Feel free to explore the different sections to learn more about me and my journey.</p>
-
-            <h3>My Interests</h3>
-            <ul>
-                <li>Web Development</li>
-                <li>Data Analysis</li>
-                <li>Artificial Intelligence</li>
-                <li>Machine Learning</li>
-            </ul>
-
-            <p> Learn more about me on <a href="about.html">About me</a> page.</p>
+            <p>Learn more about me on the <a href="about.html">About Me</a> page.</p>
         </article>
 
         <aside>
-            <h3>Latest Updates</h3>
-            <p>Currently learning HTML and CSS to improve my web development skills.</p>
-            <p> Taking Python courses from coursera to hone my skills in Machine Learning. </p> <br>
-            <h4> Ongoing Projects:</h4>
-            <p> Check out my new HTML/CSS Project for CIS class: <a href="https://github.com/riteshb01/CIS-375" target="_blank"> CIS 375</a></p>
-            <p> Check out my new Python Project: <a href="https://github.com/riteshb01/Passport-Application" target="_blank"> Passport Application </a></p>
-            <h3>Quick Links</h3>
-            <ul>
-                <li> <a href="https://github.com/riteshb01" target="_blank">GitHub profile</a></li>
-                <li> <a href="https://www.linkedin.com/in/ritesh-bastola-54141630b/" target="_blank">LinkedIn profile</a></li>
-                <li> <a href ="mailto:bastolr01@buffalostate.edu" target="_blank">Email</a></li>
+            <section class="updates">
+                <h3>Latest Updates</h3>
+                <p>Currently learning HTML and CSS to improve my web development skills.</p>
+                <p>Taking Python courses from Coursera to hone my skills in Machine Learning.</p>
+            </section>
+            
+            <section class="projects">
+                <h4>Ongoing Projects:</h4>
+                <p>Check out my new HTML/CSS Project for CIS class: <a href="https://github.com/riteshb01/CIS-375" target="_blank" rel="noopener">CIS 375</a></p>
+                <p>Check out my new Python Project: <a href="https://github.com/riteshb01/Passport-Application" target="_blank" rel="noopener">Passport Application</a></p>
+            </section>
+            
+            <section class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <div class="social-icons">
+                        <a href="https://github.com/riteshb01" target="_blank" rel="noopener" aria-label="GitHub">
+                          <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ritesh-bastola-54141630b/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                          <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:bastolr01@buffalostate.edu" aria-label="Email">
+                          <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://youtu.be/1yPphfIuR6c?si=QB6Qaxxh-_3oiTVt&t=229/" target="_blank" rel="noopener" aria-label="YouTube">
+                          <i class="fab fa-youtube"></i>
+                        </a>
+                      </div>
+                </ul>
+            </section>
 
-            </ul>
-
-
-            <h3> Ritesh in the NEWS </h3>
-            <p>I've been recognized by the Dean's List award in the Fall 2024 Semester. Click to view</p>
-            <menu> <li> <a href ="https://meritpages.com/Ritesh-Bastola/9054661" target="_blank"> Merit Pages </a></li></menu>
-            <br>
-            <h3> Changes made for Checkpoint 2:</h3>
-            <ol> 
-                <li> Added links in each page to navigate within.</li>
-                <li> Added link to github projects.</li>
-                <li> Link color changes to red when hover.</li>
-                <li> Added Background Images and applied effects on it.</li>
-                <li> Created a class - so that all effects and graphics remain 
-                    valid for all images
-                </li>
-                <li> Rounded Corner - Home Page Image.</li>
-            </ol>
+            <section class="news">
+                <h3>Ritesh in the NEWS</h3>
+                <p>I've been recognized with the Dean's List award in the Fall 2024 Semester.</p>
+                <menu>
+                    <li><a href="https://meritpages.com/Ritesh-Bastola/9054661" target="_blank" rel="noopener">Merit Pages</a></li>
+                </menu>
+            </section>
         </aside>
     </main>
 
-<footer>
-    <p>Sophomore | Computer Information Systems</p>
-    <p> Buffalo State University </p>
-    <address>
-        1300 Elmwood Avenue Buffalo New York
-    </address>
-    <p>&copy;Ritesh Bastola 2025</p>
-
-</footer>
+    <footer>
+        <div class="footer-info">
+            <p>Sophomore | Computer Information Systems</p>
+            <p>Buffalo State University</p>
+            <address>
+                1300 Elmwood Avenue, Buffalo, New York
+            </address>
+        </div>
+        <p class="copyright">&copy; Ritesh Bastola 2025</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
-
 </html>

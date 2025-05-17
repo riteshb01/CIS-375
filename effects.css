@@ -1,0 +1,104 @@
+/* Author: Ritesh Bastola
+file name: effects.css
+Checkpoint 3: April 28, 2025
+Updated: May 4, 2025 */
+
+/* Basic transitions */
+.home-image {
+  transition: opacity 0.5s ease;
+}
+
+.overlay {
+  transition: opacity 0.5s ease;
+}
+
+.home-container:hover .home-image {
+  opacity: 0.3;
+}
+
+.home-container:hover .overlay {
+  opacity: 1;
+}
+
+/* Global Link Style */
+a {
+  transition: color 0.3s ease;
+}
+
+/* Header effects */
+header h1:hover {
+  transform: translateY(-5px);
+}
+
+header h1 {
+  transition: transform 0.3s ease;
+}
+
+/* Profile image effects */
+.profile-image {
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: rotate(2deg) scale(1.05);
+}
+
+/* Form effects */
+.submit-btn:hover {
+  background: #2980b9;
+}
+
+/* Mobile menu transition */
+nav ul {
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+/* Smooth transition for theme change */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Toggle button base styles */
+#darkModeBtn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #333333;
+  border: 2px solid #333333;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: 
+    background-color 0.2s ease, 
+    color 0.2s ease, 
+    border-color 0.2s ease,
+    transform 0.1s ease;
+  margin: 1rem 0;
+}
+
+
+#darkModeBtn:hover {
+  background-color: #f0f0f0;
+}
+
+
+#darkModeBtn:active {
+  transform: scale(0.97);
+}
+
+/* Adjust button look in dark mode */
+body.dark-mode #darkModeBtn {
+  background-color: #333333;
+  color: #f1f1f1;
+  border-color: #f1f1f1;
+}
+
+body.dark-mode #darkModeBtn:hover {
+  background-color: #444444;
+}

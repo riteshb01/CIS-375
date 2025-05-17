@@ -1,0 +1,132 @@
+/* <!-- Author: Ritesh Bastola 
+Date: Feb 27, 2025
+1st Checkpoint
+
+
+2nd Checkpoint
+Date: Mar 28, 2025 
+
+3rd Check Point 
+Date: April 28, 2025
+
+file name: print.css
+--> */
+
+@media print {
+    /* Reset and basic styles */
+    * {
+      background: white !important;
+      color: black !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+      border-color: #ddd !important;
+    }
+    
+    body {
+      font-family: 'Open Sans', Arial, serif;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0.5cm;
+      background-image: none !important;
+      font-size: 12pt;
+    }
+    
+    /* Header modifications */
+    header {
+      padding: 10px 0;
+      margin-bottom: 15px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    header h1 {
+      font-size: 18pt;
+    }
+    
+    /* Hide navigation for print */
+    nav {
+      display: none;
+    }
+    
+    /* Content layout */
+    main {
+      display: block;
+    }
+    
+    article {
+      border: none;
+      padding: 0;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    
+    aside {
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+      width: 100%;
+      margin-top: 15px;
+    }
+    
+    /* Image handling */
+    img, .profile-image, .home-image {
+      max-width: 100% !important;
+      page-break-inside: avoid;
+      border: 1px solid #ddd;
+    }
+    
+    /* Remove hover effects */
+    a:hover, header h1:hover, .profile-image:hover, .home-container:hover .home-image {
+      transform: none !important;
+      opacity: 1 !important;
+      text-decoration: none !important;
+    }
+    
+    /* Links handling */
+    a {
+      text-decoration: underline;
+    }
+    
+    /* Print URLs after links */
+    a:after {
+      content: " (" attr(href) ")";
+      font-size: 90%;
+    }
+    
+    /* Don't print URLs for internal anchors */
+    a[href^="#"]:after {
+      content: "";
+    }
+    
+    /* Page breaks */
+    h1, h2, h3, h4 {
+      page-break-after: avoid;
+      page-break-inside: avoid;
+    }
+    
+    p, blockquote, ul, ol, dl, table {
+      page-break-inside: avoid;
+    }
+    
+    /* Table handling */
+    table {
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      border: 1px solid #ddd;
+      padding: 4px 8px;
+    }
+    
+    /* Remove overlay for printing */
+    .overlay {
+      display: none;
+    }
+    
+    /* Footer adjustments */
+    footer {
+      margin-top: 20px;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+      font-size: 10pt;
+    }
+  }

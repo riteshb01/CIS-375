@@ -6,76 +6,243 @@ Date: Feb 27, 2025
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Ritesh </title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="layout.css">
+    <meta name="description" content="Contact information for Ritesh Bastola - Get in touch">
+    <title>Ritesh Bastola | Contact</title>
+    <link rel="stylesheet" href="reset.css" media="all">
+    <link rel="stylesheet" href="layout.css" media="screen">
+    <link rel="stylesheet" href="style.css" media="screen">
+    <link rel="stylesheet" href="effects.css" media="screen">
+    <link rel="stylesheet" href="print.css" media="print">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
     <header>
         <h1>Contact Me</h1>
-        <nav>
-            <ul>
+        
+        <!-- Hamburger icon (mobile only) -->
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+            <span class="menu-label">Menu</span>
+        </div>
+        
+        <nav aria-label="Main navigation">
+            <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        
         <article>
-            <h2>Get In Touch</h2>
-            <img src="Images/lets_connect.png" alt="Contact illustration" class="profile-image">
-            <p>I'm always open to new opportunities and collaborations. Feel free to reach out to me through any of the
-                following channels:</p>
+    
+            
 
-            <section id="contact-info">
-                <h3>Contact Information</h3>
-                <ul>
-                    <li>Email:<a href="mailto:bastolr01@buffalostate.edu" target="_blank"> bastolr01@buffalostate.edu</a></li>
-                    <li>Phone: <a href="tel:+17168786511">+1 716 878 6511</a></li>
-
-                    <li>Location: Buffalo, NY</li>
-                </ul>
+            <section id="contact-form" class="contact-section">
+                <h3>Send Me a Message</h3>
+                
+                <form action="https://bsuacad.buffalostate.edu/~nageles/form.php" method="POST" id="contact-form">
+                    <!-- Personal Information Fieldset -->
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="form-hint">Format: example@domain.com</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+                            <span class="form-hint">Format: 123-456-7890</span>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Contact Preferences Fieldset -->
+                    <fieldset>
+                        <legend>Contact Preferences</legend>
+                        
+                        <div class="form-group">
+                            <p>Preferred Contact Method:</p>
+                            <div class="radio-group">
+                                <input type="radio" id="contact-email" name="contact_method" value="email" checked>
+                                <label for="contact-email">Email</label>
+                            </div>
+                            
+                            <div class="radio-group">
+                                <input type="radio" id="contact-phone" name="contact_method" value="phone">
+                                <label for="contact-phone">Phone</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <p>Best Time to Contact:</p>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="morning" name="contact_time[]" value="morning">
+                                <label for="morning">Morning (9AM-12PM)</label>
+                            </div>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="afternoon" name="contact_time[]" value="afternoon">
+                                <label for="afternoon">Afternoon (12PM-5PM)</label>
+                            </div>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="evening" name="contact_time[]" value="evening">
+                                <label for="evening">Evening (5PM-9PM)</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Message Details Fieldset -->
+                    <fieldset>
+                        <legend>Message Details</legend>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message:</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                    </fieldset>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
             </section>
 
-            <section id="social-media">
-                <h3>Social Media</h3>
-                <ul>
-                    <li> <a href="https://github.com/riteshb01" target="_blank">GitHub profile</a></li>
-                    <li> <a href="https://www.linkedin.com/in/ritesh-bastola-54141630b/" target="_blank">LinkedIn profile</a></li>
-                    <li> <a href="https://www.facebook.com/hriesh.bastola.9" target="_blank"> Facebook </a></li>
+            <section class="schedule-section">
+                <h3>My Spring Class Schedule</h3>
+                <table class="schedule-table">
+                  <caption>Spring 2025 Classes</caption>
+                  
+                  <colgroup>
+                    <col class="col-day">
+                    <col class="col-time">
+                    <col class="col-class">
+                  </colgroup>
+                  
+                  <thead>
+                    <tr>
+                      <th>Day</th>
+                      <th>Time</th>
+                      <th>Class</th>
+                    </tr>
+                  </thead>
+                  
+                  <tbody>
+                    <tr>
+                      <td rowspan="3">Tuesday & Thursday</td>
+                      <td>3:05 - 4:20 PM</td>
+                      <td>System Analysis and Design</td>
+                    </tr>
+                    <tr>
+                      <td>4:30 - 5:45 PM</td>
+                      <td>Diversity/Immigration Literature</td>
+                    </tr>
+                    <tr>
+                      <td>6:00 - 7:15 PM</td>
+                      <td>Web Design and Programming</td>
+                    </tr>
+                    <tr>
+                      <td>Saturday</td>
+                      <td>9:00 AM - 4:00 PM</td>
+                      <td>Multimedia</td>
+                    </tr>
+                  </tbody>
+                  
+                  <tfoot>
+                    <tr>
+                      <td colspan="3">
+                        All classes are held at Buffalo State University.
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </section>
 
-                </ul>
-            </section>
 
-            <p>Please allow 1-2 business days for a response. If your matter is urgent, please mention that in your
+
+            <p class="response-note">Please allow 1-2 business days for a response. If your matter is urgent, please mention that in your
                 message.</p>
 
-            <p> Return to <a href="index.html">Home</a> page.</p>
+            <p class="page-link">Return to <a href="index.html">Home</a> page.</p>
         </article>
 
         <aside>
-            <h3>Available Hours</h3>
-            <p>Available Monday through Friday 9 - 5 for virtual meetings.</p>
+            
 
-            <h3> Let's Connect</h3>
-            <p> Stay in touch! Follow me on Facebook, LinkedIn, or Github for updates and collaborations.</p>
+            <section id="contact-info" class="contact-section">
+                <h3>Contact Information</h3>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-label"> ✉️ &nbsp</span>
+                        <a href="mailto:bastolr01@buffalostate.edu"> Email me</a>
+                    </li>
+                    <li>
+                        <span class="contact-label">📞</span>
+                        <a href="tel:+17168786511">&nbsp Direct line</a>
+                    </li>
+                    <li>
+                        <span class="contact-label">📍&nbsp;</span>
+                        <a href="https://maps.app.goo.gl/J4QBL4RJQNP5dT4w9" target="_blank" rel="noopener">Buffalo, NY</a>
+                    </li>
+                </ul>
+            </section>
 
-            <h3>Fun Fact</h3>
-            <p>When I’m not coding or creating content, you might find me exploring new coffee spots around the city.</p>
+            <section class="connect">
+                <h3>Let's Connect</h3>
+                <p>Stay in touch! Follow me on Facebook, LinkedIn, or Github for updates and collaborations.</p>
+            </section>
+
+            <div class="social-icons">
+                <a href="https://github.com/riteshb01" target="_blank" rel="noopener" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ritesh-bastola-54141630b/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:bastolr01@buffalostate.edu" aria-label="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://youtu.be/1yPphfIuR6c?si=QB6Qaxxh-_3oiTVt&t=229/" target="_blank" rel="noopener" aria-label="YouTube">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+
+            <section class="fun-fact">
+                <h3>Fun Fact</h3>
+                <p>When I'm not coding or creating content, you might find me exploring new coffee spots around the city.</p>
+            </section>
         </aside>
     </main>
 
     <footer>
-        <p>Sophomore | Computer Information Systems</p>
-        <p> Buffalo State University </p>
-        <address>
-            1300 Elmwood Avenue Buffalo New York
-        </address>
-        <p>&copy;Ritesh Bastola 2025</p>
+        <div class="footer-info">
+            <p>Sophomore | Computer Information Systems</p>
+            <p>Buffalo State University</p>
+            <address>
+                1300 Elmwood Avenue, Buffalo, New York
+            </address>
+        </div>
+        <p class="copyright">&copy; Ritesh Bastola 2025</p>
     </footer>
+    
+    <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,37 +1,122 @@
-/* layout.css */
+/* Author: Ritesh Bastola
+file name: layout.css 
+Checkpoint 3: April 28, 2025
+Updated: May 4, 2025 */
 
 /* Base layout styles (for desktop) */
 body {
-    margin: 0 auto;
-    max-width: 1000px;
-    padding: 0 15px;
-  }
-  
- 
-  main {
-    display: flex;
-    gap: 20px;
-  }
-  
-  /* Mobile rules */
-  @media screen and (max-width: 600px) {
-    /* content in a single column */
-    main {
-      flex-direction: column;
-    }
-  
-    /* Center header and footer content */
-    header, footer {
-      text-align: center;
-    }
-  
-    /* Bring important elements (like article content) to the top */
-    main article {
-      order: -1;
-    }
-  }
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 15px;
+}
 
-  main img {
-    max-width: 100%;
+/* Header layout */
+header {
+  padding: 20px 0;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Main content layout */
+main {
+  display: flex;
+  gap: 20px;
+}
+
+main img {
+  max-width: 100%;
+}
+
+/* Article and aside layout */
+article {
+  flex: 3;
+}
+
+aside {
+  flex: 1;
+}
+
+/* Navigation layout */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+/* Table layout */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+/* Form layout */
+form {
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Desktop - hide hamburger by default */
+.hamburger {
+  display: none;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 767px) {
+  /* Navigation layout for mobile */
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    margin: 10px 0 0 10px;
+    text-align: left;
   }
   
+  .menu-label {
+    font-size: 20px;
+    color: white;
+    margin-top: 2px;
+    text-align: left;
+    font-weight: 300;
+  } 
+  
+  nav ul {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: #222;
+    padding: 0;
+    margin: 0;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+  }
+  
+  nav ul.show {
+    max-height: 500px;
+    padding: 10px 0;
+  }
+  
+  nav ul li {
+    text-align: left;
+    margin: 10px 0;
+  }
+  
+  /* Stack main content on mobile */
+  main {
+    flex-direction: column;
+  }
+}

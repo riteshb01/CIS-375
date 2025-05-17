@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Author: Ritesh Bastola 
+Date: May 4, 2025
+Gallery Page -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gallery page with photos, videos, and audio by Ritesh Bastola">
+    <title>Ritesh Bastola | Gallery</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="effects.css">
+    <link rel="stylesheet" href="print.css" media="print">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body class="gallery-page">
+    <header>
+        <h1>Gallery</h1>
+        
+        <!-- Hamburger icon (mobile only) -->
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+            <span class="menu-label">Menu</span>
+        </div>
+        
+        <nav aria-label="Main navigation">
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <div class="content-container">
+                <h2>My Gallery</h2>
+                <p>Welcome to my gallery page. Here are some photos and videos from my experiences.</p>
+                
+                <!-- Photos Section -->
+                <h3 class="gallery-heading">Photos</h3>
+                
+                <!-- Campus Category -->
+                <div class="image-category">
+                    <h4 class="category-title">Campus Life</h4>
+                    <div class="media-items">
+                        <!-- Image with description - left image, right text -->
+                        <div class="media-item">
+                            <div class="item-image">
+                                <img src="Images/iso_event.jpg" alt="ISO Cultural Event">
+                            </div>
+                            <div class="item-description">
+                                <h5>International Students Organization</h5>
+                                <p>This photo captures a memorable moment from the International Students Organization Game Nigh event at Buffalo State University. </p>
+                                <p>We had Bingo games, prizes, food, and activities representing cultures from around the world. It was an incredible opportunity to connect with other international students and share our unique perspectives.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="media-item">
+                            <div class="item-image">
+                                <img src="Images/bengals_banquet.jpg" alt="Bengals Banquet">
+                            </div>
+                            <div class="item-description">
+                                <h5>Student Leadership Engagement Program</h5>
+                                <p>The SLE Program banquet was a celebration of student leadership achievements at Buffalo State. As a student leader in <strong>Student Leadership and Engagement</strong>, I helped organize this event to recognize outstanding student leaders contributions.</p>
+                                <p>This banquet brought together student leaders from various organizations and clubs to celebrate accomplishments and foster connections across campus communities.</p>
+                                </div>
+                        </div>
+                        
+                        <div class="media-item">
+                            <div class="item-image">
+                                <img src="Images/rockwell_rd.jpg" alt="Rockwell Road">
+                            </div>
+                            <div class="item-description">
+                                <h5>Rockwell Road on Campus</h5>
+                                <p>Rockwell Road is one of the main pathways through Buffalo State University's campus. This photo was taken during the fall semester.</p>
+                                <p>This road connects several academic buildings. It's particularly scenic during autumn when the foliage changes color.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Personal Category -->
+                <div class="image-category">
+                    <h4 class="category-title">Personal Moments</h4>
+                    <div class="media-items">
+                        <div class="media-item">
+                            <div class="item-image">
+                                <img src="Images/comfort_breakfast.jpg" alt="Tea and Crush">
+                            </div>
+                            <div class="item-description">
+                                <h5>Comfort Snacks</h5>
+                                <p>There's nothing like Milk tea and some toasts in the leisure day. This simple ritual includes tea and some snacks that remind me of home.</p>
+
+                            </div>
+                        </div>
+                        
+                        <div class="media-item">
+                            <div class="item-image">
+                                <img src="Images/at_ub.jpg" alt="At UB">
+                            </div>
+                            <div class="item-description">
+                                <h5>Visiting University at Buffalo</h5>
+                                <p>This photo was taken during a visit to the University at Buffalo campus. A friend studying there invited me to explore the campus and attend a guest lecture event.</p>
+                                <p>UB has an impressive campus with modern facilities. This visit gave me a chance to experience another university environment and connect with students from different academic programs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Videos Section -->
+                <h3 class="gallery-heading">Videos</h3>
+                <div class="media-items">
+                    <div class="media-item">
+                        <div class="item-image">
+                            <video controls>
+                                <source src="Video/golf.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="item-description">
+                            <h5>TopGolf in Las Vegas</h5>
+                            <p>My first experience playing at TopGolf in Las Vegas. Despite being a complete rookie at golf, I had an amazing time trying out this unique sports entertainment complex.</p>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="media-item">
+                        <div class="item-image">
+                            <video controls>
+                                <source src="Video/buffstate_winter.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="item-description">
+                            <h5>Buffalo State in Winter</h5>
+                            <p>Buffalo winters are famous for their snow, and this video shows our campus covered in a beautiful white blanket. The campus transforms completely during the winter months.</p>
+                            <p>This was my first experience with such heavy snowfall. Despite the cold, the snow-covered campus created a peaceful and serene atmosphere that was quite different from my home country.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media-item">
+                        <div class="item-image">
+                            <video controls>
+                                <source src="Video/2024_ny_vegas.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="item-description">
+                            <h5>New Year's Eve at the Sphere</h5>
+                            <p>Celebrating the New Year in Las Vegas was an unforgettable experience. This video captures the incredible fireworks display at the Sphere, one of the newest landmarks on the Las Vegas Strip.</p>
+                            <p>The combination of fireworks and the Sphere's massive LED display created a spectacular light show to ring in 2024. The energy of the crowd and the scale of the celebration made this a truly memorable moment.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Audio Section -->
+                <h3 class="gallery-heading">Audio</h3>
+                <div class="audio-gallery">
+                    <div class="audio-item">
+                        <h4>Podcast on Homelessness</h4>
+                        <audio controls>
+                            <source src="Audio/3-podcast-bastola.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <p>This podcast episode discusses the issue of homelessness and potential solutions. As part of a class project, I researched this topic and recorded this discussion to raise awareness about homelessness in our community and explore possible approaches to address this complex social issue.</p>
+                    </div>
+                </div>
+
+                <section class="document-section">
+                    <h3 class="gallery-heading">Document</h3>
+                    <div class="document-container">
+                      <object data="Texts/2-podcast_script-Bastola.pdf" type="application/pdf" width="100%" height="500px">
+                        <p>It appears your browser doesn't support embedded PDFs. 
+                           <a href="Texts/2-podcast_script-Bastola.pdf">Click here to download the PDF</a>.</p>
+                      </object>
+                    </div>
+                  </section>
+                
+                <p><a href="index.html">Return to Home page</a></p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p>Sophomore | Computer Information Systems</p>
+            <p>Buffalo State University</p>
+            <address>
+                1300 Elmwood Avenue, Buffalo, New York
+            </address>
+        </div>
+        <p class="copyright">&copy; Ritesh Bastola 2025</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
