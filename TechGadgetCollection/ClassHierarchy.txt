@@ -1,0 +1,60 @@
+╔══════════════════════════════════════════════════════════════════╗
+║         TechGadgetCollection Class Hierarchy                      ║
+╚══════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────┐
+│                       CollectionItem (Base Class)                │
+├─────────────────────────────────────────────────────────────────┤
+│ Properties:                                                      │
+│   • Name : string                                               │
+│   • Brand : string                                              │
+│   • Price : decimal                                             │
+│   • Category : string                                           │
+│   • PurchaseDate : DateTime                                     │
+│                                                                  │
+│ Methods:                                                         │
+│   • CollectionItem()                                            │
+│   • CollectionItem(name, brand, price, category, purchaseDate) │
+│   • virtual GetSummary() : string                              │
+└─────────────────────────────────────────────────────────────────┘
+                              ▲
+                              │ inherits from
+                              │
+┌─────────────────────────────────────────────────────────────────┐
+│                   TechGadget (Derived Class)                     │
+├─────────────────────────────────────────────────────────────────┤
+│ Additional Properties:                                           │
+│   • WarrantyMonths : int  ◄── Custom property specific to       │
+│                                TechGadget                        │
+│                                                                  │
+│ Constructors:                                                    │
+│   • TechGadget() : base()                                       │
+│   • TechGadget(name, brand, price, category, purchaseDate,     │
+│                warrantyMonths) : base(...)  ◄── Calls base      │
+│                                                                  │
+│ Overridden Methods:                                              │
+│   • override GetSummary() : string  ◄── Adds warranty info      │
+└─────────────────────────────────────────────────────────────────┘
+
+Example Usage:
+──────────────
+
+TechGadget gadget = new TechGadget(
+    "iPhone 15 Pro",    // name
+    "Apple",            // brand
+    999.99m,            // price
+    "Phone",            // category
+    DateTime.Now,       // purchaseDate
+    12                  // warrantyMonths ◄── Additional parameter
+);
+
+Console.WriteLine(gadget.GetSummary());
+// Output: "iPhone 15 Pro by Apple - $999.99 (Phone) - Warranty: 12 months"
+
+Key Features:
+─────────────
+✓ Proper inheritance using : base()
+✓ Custom property (WarrantyMonths)
+✓ Base constructor properly called
+✓ GetSummary() correctly overridden
+✓ Namespace: TechGadgetCollection
