@@ -31,6 +31,10 @@ bld/
 *.nupkg
 **/packages/*
 
+# Test directory build artifacts
+Test/[Bb]in/
+Test/[Oo]bj/
+
 # Others
 *.cache
 *.log

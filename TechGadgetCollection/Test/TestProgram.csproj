@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <StartupObject>TechGadgetCollection.TestProgram</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\CollectionItem.cs" Link="CollectionItem.cs" />
+    <Compile Include="..\TechGadget.cs" Link="TechGadget.cs" />
+  </ItemGroup>
+
+</Project>
