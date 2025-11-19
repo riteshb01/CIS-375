@@ -1,0 +1,15 @@
+/home/runner/work/CIS-375/CIS-375/TechGadgetCollection/bin/Debug/net8.0-windows/TechGadgetCollection
+/home/runner/work/CIS-375/CIS-375/TechGadgetCollection/bin/Debug/net8.0-windows/TechGadgetCollection.deps.json
+/home/runner/work/CIS-375/CIS-375/TechGadgetCollection/bin/Debug/net8.0-windows/TechGadgetCollection.runtimeconfig.json
+/home/runner/work/CIS-375/CIS-375/TechGadgetCollection/bin/Debug/net8.0-windows/TechGadgetCollection.dll
+/home/runner/work/CIS-375/CIS-375/TechGadgetCollection/bin/Debug/net8.0-windows/TechGadgetCollection.pdb
+/home/runner/work/CIS-375/CIS-375/TechGadgetCollection/obj/Debug/net8.0-windows/TechGadgetCollection.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/CIS-375/CIS-375/TechGadgetCollection/obj/Debug/net8.0-windows/TechGadgetCollection.AssemblyInfoInputs.cache
+/home/runner/work/CIS-375/CIS-375/TechGadgetCollection/obj/Debug/net8.0-windows/TechGadgetCollection.AssemblyInfo.cs
+/home/runner/work/CIS-375/CIS-375/TechGadgetCollection/obj/Debug/net8.0-windows/TechGadgetCollection.csproj.CoreCompileInputs.cache
+/home/runner/work/CIS-375/CIS-375/TechGadgetCollection/obj/Debug/net8.0-windows/TechGadgetCollection.sourcelink.json
+/home/runner/work/CIS-375/CIS-375/TechGadgetCollection/obj/Debug/net8.0-windows/TechGadgetCollection.dll
+/home/runner/work/CIS-375/CIS-375/TechGadgetCollection/obj/Debug/net8.0-windows/refint/TechGadgetCollection.dll
+/home/runner/work/CIS-375/CIS-375/TechGadgetCollection/obj/Debug/net8.0-windows/TechGadgetCollection.pdb
+/home/runner/work/CIS-375/CIS-375/TechGadgetCollection/obj/Debug/net8.0-windows/TechGadgetCollection.genruntimeconfig.cache
+/home/runner/work/CIS-375/CIS-375/TechGadgetCollection/obj/Debug/net8.0-windows/ref/TechGadgetCollection.dll
