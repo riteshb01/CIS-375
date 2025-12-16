@@ -8,48 +8,77 @@
 /* ===== BASE STYLES ===== */
 .gallery-page {
     background-image: none;
-    background-color: #ffffff;
+    background-color: var(--bg-primary);
 }
 
 .content-container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 var(--spacing-md);
 }
 
 /* ===== HEADINGS ===== */
 .gallery-heading {
-    color: #325c86;
-    margin: 30px 0 15px 0;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 8px;
-    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin: var(--spacing-2xl) 0 var(--spacing-md) 0;
+    border-bottom: 3px solid var(--primary-light);
+    padding-bottom: var(--spacing-sm);
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.gallery-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
 }
 
 .category-title {
-    color: #325c86;
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-left: var(--spacing-sm);
+    border-left: 4px solid var(--primary-light);
 }
 
-/* ===== MEDIA ITEMS WITH LEFT IMAGE, RIGHT TEXT ===== */
+body.dark-mode .gallery-heading,
+body.dark-mode .category-title {
+    color: var(--primary-light);
+}
+
+/* ===== MEDIA ITEMS WITH CARD DESIGN ===== */
 .media-items {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    margin: 20px 0;
+    gap: var(--spacing-2xl);
+    margin: var(--spacing-lg) 0;
 }
 
 .media-item {
     display: flex;
-    border: 1px solid #ddd;
-    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    background-color: var(--bg-primary);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.media-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .item-image {
     flex: 1;
     min-width: 300px;
+    overflow: hidden;
 }
 
 .item-image img,
@@ -58,58 +87,107 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform var(--transition-slow);
+}
+
+.item-image img:hover,
+.item-image video:hover {
+    transform: scale(1.05);
 }
 
 .item-description {
     flex: 1;
-    padding: 15px;
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .item-description h5 {
-    color: #325c86;
-    margin-bottom: 10px;
-    font-size: 1.05rem;
-    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+body.dark-mode .item-description h5 {
+    color: var(--primary-light);
 }
 
 .item-description p {
-    margin-bottom: 10px;
-    line-height: 1.5;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+    color: var(--text-secondary);
 }
 
 /* ===== AUDIO SECTION ===== */
 .audio-gallery {
-    margin: 20px 0;
+    margin: var(--spacing-lg) 0;
 }
 
 .audio-item {
-    border: 1px solid #ddd;
-    padding: 15px;
-    background-color: #f5f5f5;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-primary));
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.audio-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
 }
 
 .audio-item h4 {
-    margin-bottom: 10px;
-    color: #325c86;
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+body.dark-mode .audio-item h4 {
+    color: var(--primary-light);
 }
 
 .audio-item audio {
     width: 100%;
-    margin: 10px 0;
+    margin: var(--spacing-sm) 0;
+    border-radius: var(--radius-md);
 }
 
 .audio-item p {
-    margin-top: 10px;
-    line-height: 1.5;
+    margin-top: var(--spacing-sm);
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* ===== DOCUMENT SECTION ===== */
+.document-section {
+    margin: var(--spacing-2xl) 0;
+}
+
+.document-container {
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    background-color: var(--bg-primary);
+    box-shadow: var(--shadow-md);
+}
+
+.document-container object {
+    border-radius: var(--radius-md);
 }
 
 /* ===== LINKS ===== */
 .content-container a {
-    color: #3498db;
+    color: var(--primary-light);
     text-decoration: none;
+    transition: color var(--transition-base);
 }
 
 .content-container a:hover {
+    color: var(--accent-color);
     text-decoration: underline;
 }
 
@@ -123,6 +201,10 @@
     .item-image {
         max-width: 50%;
     }
+    
+    .content-container {
+        padding: 0 var(--spacing-xl);
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -133,17 +215,52 @@
     
     .item-image {
         width: 100%;
-        min-height: 200px;
+        min-height: 250px;
+        min-width: 100%;
     }
     
     .content-container {
-        padding: 0 10px;
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .gallery-heading {
+        font-size: 1.3rem;
+    }
+    
+    .category-title {
+        font-size: 1.1rem;
     }
 }
 
-.pdf-container {
-    margin: 20px 0;
-    border: 1px solid #ddd;
-    padding: 10px;
-    background-color: white;
-  }
+/* ===== CATEGORY SECTION ENHANCEMENT ===== */
+.image-category {
+    margin-bottom: var(--spacing-2xl);
+    padding: var(--spacing-lg);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ===== LOADING STATE FOR IMAGES ===== */
+img {
+    background: linear-gradient(90deg, 
+        var(--bg-tertiary) 0px, 
+        rgba(52, 152, 219, 0.1) 40px, 
+        var(--bg-tertiary) 80px);
+    background-size: 200px 100%;
+    animation: skeleton-loading 1.2s ease-in-out infinite;
+}
+
+img.loaded {
+    animation: none;
+    background: none;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: calc(200px + 100%) 0;
+    }
+}
